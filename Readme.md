@@ -8,7 +8,7 @@ This project is my submission for the **CSS Art: Office Culture** prompt in the 
 
 The homepage features a fully CSS interior of the ISS, with a panoramic view of Earth. It captures the spirit of remote collaboration in extreme environments—where calendars, messages, and news updates float alongside orbital serenity.
 
-![Homepage](./assets/screenshoot.png)
+![Homepage](./public/screenshoot.png)
 
 ## Ai
 
