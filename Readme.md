@@ -4,6 +4,8 @@
 
 This project is my submission for the **CSS Art: Office Culture** prompt in the [Frontend Challenge: Office Edition](https://dev.to/challenges/frontend/axero), sponsored by Axero. It reimagines office life aboard the **International Space Station**, blending sci-fi aesthetics with workplace interactivity.
 
+[Live website](http://dev.to.aurelienj.ch)
+
 ## Concept
 
 The homepage features a fully CSS interior of the ISS, with a panoramic view of Earth. It captures the spirit of remote collaboration in extreme environments—where calendars, messages, and news updates float alongside orbital serenity.
