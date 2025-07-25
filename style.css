@@ -1,0 +1,384 @@
+/* style.css */
+@media screen and (max-width: 1250px) {
+  .desktop {
+    visibility: hidden;
+  }
+}
+
+html {
+  font-size: 100%; /* baseline for rem units */
+}
+
+body {
+  font-family: "Google Sans Code", monospace;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #051c29;
+  overflow: hidden;
+  min-width: 1550px;
+  min-height: 750px;
+  max-width: 3100px;
+  max-height: 1500px;
+}
+
+h3,
+p {
+  font-size: 0.75rem;
+}
+/* hover style */
+
+@keyframes shakeX {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hoverItems:hover {
+  animation: shakeX 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* floating key-frame */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-10px) translateX(10px);
+  }
+  50% {
+    transform: translateY(10px) translateX(-15px);
+  }
+  75% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes floatingClip {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0);
+  }
+  25% {
+    transform: translateY(-10px) translateX(10px) rotate(35deg);
+  }
+  50% {
+    transform: translateY(10px) translateX(-15px) rotate(75deg);
+  }
+  75% {
+    transform: translateY(-10px) translateX(5px) rotate(25deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+}
+/* iss-room */
+.issRoom {
+  background-image: url("./assets/iss-room.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; /* largeur à 100%, hauteur auto */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Earth */
+.earth {
+  background-image: url("./assets/earth.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 70vw;
+  height: 70vw;
+  position: absolute;
+  z-index: 1;
+  animation: slideLoop 100s linear infinite;
+}
+
+@keyframes slideLoop {
+  0% {
+    transform: translateX(90%) translateY(-70%);
+  }
+  100% {
+    transform: translateX(-20%) translateY(55%);
+  }
+}
+
+/* Both hands */
+.left-hand,
+.right-hand {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  pointer-events: none;
+  width: 30vw;
+  height: 80vh;
+  position: absolute;
+  bottom: -20vh;
+  z-index: 10;
+}
+
+@keyframes left-wavy {
+  0%,
+  100% {
+    transform: translateX(100px) translateY(100px) rotate(40deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) rotate(35deg);
+  }
+}
+
+@keyframes right-wavy {
+  0%,
+  100% {
+    transform: translateX(100px) translateY(100px) rotate(-40deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) rotate(-25deg);
+  }
+}
+
+.left-hand {
+  background-image: url("./assets/left-hand.png");
+  left: 5vw;
+  animation: left-wavy 35s linear infinite;
+}
+.right-hand {
+  background-image: url("./assets/right-hand.png");
+  right: 5vw;
+  animation: right-wavy 35s linear infinite;
+}
+
+/* sub-box */
+.sub-box {
+  width: 15vw;
+  position: absolute;
+
+  padding: 1em;
+  background-color: #000000d6;
+  border-radius: 5%;
+  color: rgb(85, 245, 114);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+
+.sub-box-left {
+  top: 0;
+  left: -25%;
+}
+
+.sub-box-right {
+  top: 0;
+  right: -25%;
+}
+
+.sub-box-center {
+  top: 10%;
+  right: 20%;
+}
+/* Hover effect */
+.computer:hover .sub-box,
+.news:hover .sub-box,
+.calendar:hover .sub-box,
+.bubbletea:hover .sub-box,
+.stackofpaper:hover .sub-box,
+.uphone:hover .sub-box {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Computer*/
+
+.computer {
+  background-image: url("./assets/computer.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 30vw;
+  height: 31vw;
+  position: absolute;
+  top: 30vh;
+  left: 40vw;
+  z-index: 1;
+  animation: floating 25s ease-in-out infinite;
+}
+
+/*news*/
+
+.news {
+  background-image: url("./assets/news.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 10vw;
+  height: 11vw;
+  position: absolute;
+  top: 10vh;
+  right: 17vw;
+  z-index: 1;
+  animation: floating 8s linear infinite;
+}
+
+/*calendar*/
+
+.calendar {
+  background-image: url("./assets/calendar.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 10vw;
+  height: 11vw;
+  position: absolute;
+  top: 10vh;
+  left: 18vw;
+  z-index: 1;
+  animation: floating 12s linear infinite;
+}
+
+/* bubbletea */
+
+.bubbletea {
+  background-image: url("./assets/bubbletea.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 10vw;
+  height: 17vw;
+  position: absolute;
+  top: 35vh;
+  left: 25vw;
+  z-index: 1;
+  animation: floating 20s linear infinite;
+}
+
+/* stackofpaper */
+
+.stackofpaper {
+  background-image: url("./assets/stackofpaper.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 16vw;
+  height: 13vw;
+  position: absolute;
+  top: 55vh;
+  left: 2vw;
+  z-index: 1;
+  animation: floating 12s linear infinite;
+}
+
+/* uphone */
+
+.uphone {
+  background-image: url("./assets/uphone.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 10vw;
+  height: 15vw;
+  position: absolute;
+  top: 40vh;
+  right: 5vw;
+  z-index: 1;
+  animation: floating 18s linear infinite;
+}
+
+/* clip */
+.clip {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 2vw;
+  height: 2vw;
+  position: absolute;
+  z-index: 19;
+  animation: floatingClip 16s linear infinite;
+}
+
+.clip1 {
+  background-image: url("./assets/clip1.png");
+  top: 10vh;
+  left: 40vw;
+  transform: rotate(45deg);
+}
+
+.clip2 {
+  background-image: url("./assets/clip2.png");
+  top: 33vh;
+  right: 25vw;
+}
+
+.clip3 {
+  background-image: url("./assets/clip3.png");
+  top: 50vh;
+  left: 15vw;
+}
+
+.clip4 {
+  background-image: url("./assets/clip4.png");
+  top: 15vh;
+  right: 44vw;
+}
+
+.clip5 {
+  background-image: url("./assets/clip5.png");
+  bottom: 14vh;
+  right: 30vw;
+}
+
+.clip6 {
+  background-image: url("./assets/clip6.png");
+  top: 20vh;
+  left: 10vw;
+}
+
+.clip7 {
+  background-image: url("./assets/clip7.png");
+  top: 30vh;
+  left: 30vw;
+}
+
+/* clipBox */
+.clipBox {
+  background-image: url("./assets/clipBox.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 5vw;
+  height: 7vw;
+  position: absolute;
+  top: 45vh;
+  right: 20vw;
+  z-index: 1;
+  animation: floating 15s linear infinite;
+}
