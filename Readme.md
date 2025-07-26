@@ -21,9 +21,8 @@ All drawings were created using Copilot AI.
 - HTML5
 - CSS3 (no preprocessors)
 
-## 🧪 Judging Criteria Alignment
+## Judging Criteria Alignment
 
-- **Responsiveness**: Scales smoothly across screen sizes using pure CSS layout techniques
 - **Accessibility**: Uses semantic HTML to support basic accessibility without additional frameworks
 - **Creativity**: Presents a unique and imaginative interpretation of office culture—set aboard the ISS!
 - **Code Quality**: Fully built with efficient, well-structured HTML and CSS only—no fluff, no dependencies
